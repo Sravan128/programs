@@ -20,9 +20,9 @@ class FilesAscendingOrder {
 				}
           }
 }
-class AddFile{
-	
-	public void createfile(String str) {
+
+ class BusinessRequirements {
+       public void createfile(String str) {
 		File ff=new File(str+".txt");
 		try {
 			if(ff.createNewFile()) {       //create a new files and returns the boolean value
@@ -36,10 +36,7 @@ class AddFile{
 			e.printStackTrace();
 		}
 	}
-	
-}
-class DeleteFile{
-	public void deletefile(String str) {
+        public void deletefile(String str) {
 		File ff=new File(str+".txt");
 		try {
 			if(ff.delete()) {   //ff.delete perform the deletion of the specified file and returns the boolean value
@@ -53,9 +50,7 @@ class DeleteFile{
 			e.printStackTrace();
 		}
 	}
-}
-class SearchFile{
-	public void searchfile(String str) {
+        public void searchfile(String str) {
 		File ff=new File(str+".txt");
 		
 		try {
@@ -71,8 +66,6 @@ class SearchFile{
 		}
 		
 	}
-}
- class BusinessRequirements {
 	
 	public void operations(String path) {
 		Scanner sn=new Scanner(System.in);
@@ -85,17 +78,17 @@ class SearchFile{
 			switch(choice) {
 			    case 1:System.out.println("Enter file name to add : ");
 			       String str=sn.next();
-			       AddFile af=new AddFile();
+			       BusinessRequirements af=new BusinessRequirements();
 			       af.createfile(path+str);
 			    	break;
 			    case 2:System.out.println("Enter file name to Delete : ");
 			       String str1=sn.next();
-			       DeleteFile df=new DeleteFile();
+			        BusinessRequirements df=new  BusinessRequirements();
 			       df.deletefile(path+str1);
 			    	break;
 			    case 3:System.out.println("Enter file name to search : ");
 			       String str2=sn.next();
-			       SearchFile sf=new SearchFile();
+			        BusinessRequirements sf=new  BusinessRequirements();
 			       sf.searchfile(path+str2);
 			    	break;
 			    case 4:
